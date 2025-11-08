@@ -54,6 +54,7 @@ swipl -f basemejor.pl -g "consulta(X)" -t halt
 Esto permite generar diagnósticos y fichas técnicas dinámicas.
 
 🌿 Módulos Funcionales
+
 ✅ A. Fichas Técnicas Inteligentes
 
 Genera fichas dinámicas basadas en hechos Prolog. Incluye:
