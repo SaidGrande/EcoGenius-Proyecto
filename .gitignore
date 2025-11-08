@@ -1,0 +1,10 @@
+# Archivos del SO
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Archivos de entorno
+.env
