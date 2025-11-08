@@ -1,108 +1,145 @@
-✅ EcoGenius Ultimate V5
-Sistema Experto Basado en Conocimiento para Diagnóstico y Manejo de Cultivos
+# 🌱 EcoGenius Ultimate V5  
+### 🧠 Sistema Experto Basado en Conocimiento para Diagnóstico y Manejo de Cultivos  
+**Universidad de Guadalajara – CUCEI**  
+**Materia:** Seminario de Solución de Problemas de Sistemas Basados en Conocimiento (D05 – 2025B)  
+**Profesor:** Julio Esteban Valdés López  
 
-Universidad de Guadalajara (UDG) – CUCEI
-Materia: Seminario de Solución de Problemas de Sistemas Basados en Conocimiento (D05 – 2025B)
-Profesor: Julio Esteban Valdés López
+---
 
-📘 Descripción General
+# 📘 Descripción General
 
-EcoGenius Ultimate V5 es un sistema experto web orientado al análisis, diagnóstico y recomendación de cuidados para plantas de huerto y jardín. Su propósito es democratizar el conocimiento agrícola digitalizando la experiencia real de agricultores y horticultores.
+EcoGenius Ultimate V5 es un **sistema experto web** diseñado para diagnosticar, analizar y recomendar cuidados para plantas, basado en **conocimiento empírico real**, no solo teoría académica.
 
-A diferencia de las enciclopedias botánicas tradicionales basadas en teoría, EcoGenius se fundamenta en conocimiento empírico, validado directamente en el huerto experimental del estudiante Said Omar Hernández Grande, donde se observaron cultivos reales como cítricos, frutales, jamaica, pepino, jícama, nopal y otros.
+Este sistema digitaliza la experiencia de agricultores y horticultores, tomando como estudio de caso el **huerto experimental del estudiante Said Omar Hernández Grande**, donde se validaron reglas y comportamientos reales de cultivos como:
 
-El sistema razona como un agricultor experimentado, interpretando síntomas visibles y condiciones ambientales para ofrecer diagnósticos y recomendaciones prácticas.
+- Cítricos (limón, mandarina dulce y agria)
+- Frutales (papaya, guayaba, ciruela)
+- Hortalizas (pepino, jícama, jamaica)
+- Plantas nativas (nopal)
 
-EcoGenius combina una interfaz web en PHP con un motor de inferencia desarrollado en Prolog (SWI-Prolog).
+El software razona igual que un agricultor experimentado: evaluando síntomas visibles, comparando condiciones ambientales y proponiendo acciones basadas en experiencia práctica.
 
-👥 Integrantes del Equipo
+---
 
-Said Omar Hernández Grande	218515598
+# 👥 Integrantes del Equipo
 
-Tania Joseline Reséndiz Díaz	220779713
+- 👤 **Said Omar Hernández Grande** – 218515598  
+- 👤 **Tania Joseline Reséndiz Díaz** – 220779713  
+- 👤 **Clio Vanessa Guzmán Ruiz** – 219543854  
 
-Clio Vanessa Guzmán Ruiz	219543854
+---
 
-🧠 Arquitectura del Sistema
+# 🏗️ Arquitectura del Sistema
 
-El sistema está compuesto por tres elementos principales:
+## 1. 🌐 Interfaz Web (PHP + HTML + CSS)
+Permite:
+- Consultar plantas
+- Solicitar fichas técnicas
+- Generar diagnósticos
+- Ver compatibilidad entre cultivos
 
-1. Interfaz Web (PHP + HTML + CSS)
+## 2. 🧠 Motor de Conocimiento (Prolog – SWI-Prolog)
+Archivo principal: **basemejor.pl**
 
-Interfaz amigable que permite al usuario seleccionar una planta, ingresar síntomas o elegir dos cultivos para verificar compatibilidad.
-
-2. Motor de Conocimiento (Prolog)
-
-Archivo principal: basemejor.pl
 Incluye:
+- Más de **100 fichas botánicas**
+- Reglas de diagnóstico basadas en observación del huerto
+- Compatibilidad/incompatibilidad entre cultivos
+- Reglas de manejo y recomendaciones de riego, luz y suelo
 
-Más de 100 fichas botánicas.
-
-Reglas basadas en observación directa de campo.
-
-Conocimiento agrícola específico para plantas mexicanas y universales.
-
-Relación entre requerimientos de luz, suelo, riego y temperatura.
-
-3. Integración PHP ↔ Prolog
-
-procesar.php ejecuta consultas Prolog mediante:
+## 3. 🔗 Integración PHP ↔ Prolog
+El archivo **procesar.php** ejecuta consultas utilizando:
 
 swipl -f basemejor.pl -g "consulta(X)" -t halt
 
+Lo que permite que la información sea generada dinámicamente.
 
-Esto permite generar diagnósticos y fichas técnicas dinámicas.
+---
 
-🌿 Módulos Funcionales
+# 🔍 Módulos Funcionales
 
-✅ A. Fichas Técnicas Inteligentes
+## ✅ A. Enciclopedia Viva – Fichas Técnicas Dinámicas
+Genera información detallada como:
+- Requerimientos de luz
+- Frecuencia de riego
+- Temperatura óptima
+- Suelo recomendado
+- Nivel de dificultad
+- Fertilización ideal
 
-Genera fichas dinámicas basadas en hechos Prolog. Incluye:
+Todo se obtiene consultando directamente la base de conocimiento.
 
-Nivel real de luz requerida
+---
 
-Temperatura tolerada
+## ✅ B. Doctor Plantas – Diagnóstico Inteligente
 
-Frecuencia óptima de riego
+Evalúa síntomas como:
+- 🟡 Hojas amarillas  
+- 🍂 Puntas secas  
+- 🥀 Hojas caídas  
+- 🐛 Presencia de plagas  
+- 🛑 Falta de crecimiento  
 
-Tipo de suelo
+Produce un análisis compuesto por:
+- Síntoma identificado  
+- Causa probable  
+- Nivel de urgencia  
+- Plan de recuperación  
+- Consejos adicionales  
 
-Fertilización recomendada
+---
 
-Dificultad de cultivo
+## ✅ C. Compatibilidad entre Plantas (Tinder Vegetal)
 
-✅ B. Doctor Plantas – Diagnóstico Inteligente
+Determina si dos plantas pueden convivir según:
+- Tipo de luz  
+- Frecuencia de riego  
+- Tipo de suelo  
+- Requerimientos del entorno  
+- Reglas agrícolas tradicionales  
 
-Interpreta síntomas como:
+Ejemplo:  
+- ❌ Tomate + Patata → Se enferman entre sí  
+- ✅ Jamaica + Pepino → Alta compatibilidad  
 
-Hojas amarillas
+---
 
-Manchas marrones
+# 🛠️ Tecnologías Utilizadas
 
-Caída de hojas
+- ⚙️ **Backend:** PHP 8+
+- 🧠 **Motor Lógico:** SWI-Prolog  
+- 🖥️ **Servidor:** Apache (XAMPP / Render)  
+- 🐳 **Docker:** Para despliegue en Render  
+- 🎨 **Frontend:** HTML + CSS + JS  
+- 🔌 **Integración:** `proc_open()` para ejecutar consultas Prolog  
 
-Plagas
+---
 
-Falta de crecimiento
+# 📁 Estructura del Proyecto
+EcoGenius-V5
+│
+├── src/
+│ ├── index.php
+│ ├── procesar.php
+│ └── basemejor.pl
+│
+├── Dockerfile
+├── composer.json
+├── .gitignore
+└── README.txt
 
-El sistema determina:
+---
 
-Causa probable
+# ✅ Estado Actual del Proyecto
 
-Nivel de urgencia
+- Motor de inferencia funcional  
+- Más de 100 reglas registradas  
+- Diagnósticos reales basados en experiencia  
+- Fichas técnicas completamente dinámicas  
+- Proyecto listo para presentarse y desplegarse  
 
-Plan de recuperación
+---
 
-✅ C. Tinder Vegetal – Compatibilidad entre Plantas
+# 📄 Licencia  
+Proyecto académico sin fines de lucro. Uso exclusivo para fines educativos dentro de la Universidad de Guadalajara.
 
-Evalúa si dos plantas pueden convivir considerando:
-
-Requerimientos de luz
-
-Frecuencia de riego
-
-Tipo de suelo
-
-Incompatibilidades tradicionales de cultivo
-
-Rivalidades agrícolas (“relaciones tóxicas”)
