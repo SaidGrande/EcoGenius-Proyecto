@@ -115,21 +115,6 @@ Ejemplo:
 
 ---
 
-# 📁 Estructura del Proyecto
-EcoGenius-V5
-│
-├── src/
-│ ├── index.php
-│ ├── procesar.php
-│ └── basemejor.pl
-│
-├── Dockerfile
-├── composer.json
-├── .gitignore
-└── README.txt
-
----
-
 # ✅ Estado Actual del Proyecto
 
 - Motor de inferencia funcional  
