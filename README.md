@@ -16,10 +16,13 @@ El sistema razona como un agricultor experimentado, interpretando síntomas visi
 EcoGenius combina una interfaz web en PHP con un motor de inferencia desarrollado en Prolog (SWI-Prolog).
 
 👥 Integrantes del Equipo
-Nombre	Código
+
 Said Omar Hernández Grande	218515598
+
 Tania Joseline Reséndiz Díaz	220779713
+
 Clio Vanessa Guzmán Ruiz	219543854
+
 🧠 Arquitectura del Sistema
 
 El sistema está compuesto por tres elementos principales:
